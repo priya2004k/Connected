@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connected - Image Upload</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1 class="title">Connected</h1>
+        <p class="daily-prompt">DAILY PROMPT: SOMETHING THAT MADE YOU SMILE TODAY</p>
+        <form id="image-upload-form" method="post" action="/upload" enctype="multipart/form-data">
+            <label for="image" class="upload-label">Choose an image to upload</label>
+            <input type="file" id="image" name="image" accept="image/png, image/jpeg">
+            <button type="submit">Upload Image</button>
+        </form>
+        <button id="view-collage-btn" class="view-collage-btn" onclick="window.location.href='/collage';">View Collage</button>
+    </header>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
